@@ -1,67 +1,94 @@
 export default function Home() {
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div style={{ 
+      minHeight: '100vh', 
+      backgroundColor: '#0A0A0A', 
+      color: 'white',
+      fontFamily: 'Arial, sans-serif'
+    }}>
       {/* Navbar */}
-      <nav className="border-b border-gray-800">
-        <div className="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center">
-          <span className="text-xl font-bold tracking-tight">ARTIWORKS</span>
-          <div className="space-x-8 text-gray-400">
-            <a href="#" className="hover:text-white transition">Work</a>
-            <a href="#" className="hover:text-white transition">Writing</a>
-            <a href="#" className="hover:text-white transition">Dashboard</a>
-          </div>
+      <div style={{ 
+        borderBottom: '1px solid #333', 
+        padding: '20px 40px',
+        display: 'flex',
+        justifyContent: 'space-between'
+      }}>
+        <span style={{ fontWeight: 'bold', fontSize: '20px' }}>ARTIWORKS</span>
+        <div style={{ display: 'flex', gap: '30px', color: '#999' }}>
+          <a href="#" style={{ textDecoration: 'none', color: '#999' }}>Work</a>
+          <a href="#" style={{ textDecoration: 'none', color: '#999' }}>Writing</a>
+          <a href="#" style={{ textDecoration: 'none', color: '#999' }}>Dashboard</a>
         </div>
-      </nav>
+      </div>
 
       {/* Hero Section */}
-      <section className="max-w-6xl mx-auto px-6 py-28">
-        <div className="max-w-3xl">
-          <div className="text-red-600 text-sm font-mono mb-4">// ARTIFICIAL BUILDER</div>
-          <h1 className="text-7xl font-bold tracking-tight leading-tight">
-            Arief.
-            <br />
-            <span className="text-gray-400">Build. Write. Dominate.</span>
-          </h1>
-          <p className="text-gray-400 text-lg mt-6 max-w-xl">
-            Personal digital ecosystem. One karya, satu waktu. 
-            Dari coding, nulis, sampe habit tracking — semuanya ada di sini.
-          </p>
-          <div className="flex gap-4 mt-10">
-            <button className="bg-red-700 hover:bg-red-800 px-6 py-3 font-semibold transition">
-              EXPLORE PROJECTS
-            </button>
-            <button className="border border-gray-700 hover:border-white px-6 py-3 font-semibold transition">
-              READ ARTICLES
-            </button>
-          </div>
+      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '100px 40px' }}>
+        <div style={{ color: '#B91C1C', fontSize: '14px', marginBottom: '20px' }}>
+          // ARTIFICIAL BUILDER
         </div>
-      </section>
+        <h1 style={{ fontSize: '72px', fontWeight: 'bold', marginBottom: '20px' }}>
+          Arief.
+          <br />
+          <span style={{ color: '#999' }}>Build. Write. Dominate.</span>
+        </h1>
+        <p style={{ color: '#999', fontSize: '18px', maxWidth: '500px' }}>
+          Personal digital ecosystem. Satu karya, satu waktu. 
+          Dari coding, nulis, sampe habit tracking — semuanya ada di sini.
+        </p>
+        <div style={{ display: 'flex', gap: '15px', marginTop: '40px' }}>
+          <button style={{ 
+            backgroundColor: '#B91C1C', 
+            border: 'none', 
+            padding: '12px 24px', 
+            color: 'white',
+            fontWeight: 'bold',
+            cursor: 'pointer'
+          }}>
+            EXPLORE PROJECTS
+          </button>
+          <button style={{ 
+            backgroundColor: 'transparent', 
+            border: '1px solid #444', 
+            padding: '12px 24px', 
+            color: 'white',
+            fontWeight: 'bold',
+            cursor: 'pointer'
+          }}>
+            READ ARTICLES
+          </button>
+        </div>
+      </div>
 
-      {/* Stats / Quick Preview */}
-      <section className="border-t border-gray-800 bg-[#0F0F0F]">
-        <div className="max-w-6xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-3 gap-10">
+      {/* Stats Section */}
+      <div style={{ 
+        borderTop: '1px solid #222', 
+        borderBottom: '1px solid #222',
+        backgroundColor: '#0F0F0F',
+        padding: '60px 40px'
+      }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', justifyContent: 'space-between' }}>
           <div>
-            <div className="text-red-600 text-3xl font-bold">10+</div>
-            <div className="text-white text-lg font-semibold mt-2">Projects</div>
-            <div className="text-gray-500 text-sm">Web, UI/UX, blockchain</div>
+            <div style={{ color: '#B91C1C', fontSize: '32px', fontWeight: 'bold' }}>10+</div>
+            <div style={{ fontWeight: 'bold', marginTop: '10px' }}>Projects</div>
+            <div style={{ color: '#666', fontSize: '14px' }}>Web, UI/UX, blockchain</div>
           </div>
           <div>
-            <div className="text-red-600 text-3xl font-bold">∞</div>
-            <div className="text-white text-lg font-semibold mt-2">Growth</div>
-            <div className="text-gray-500 text-sm">Gym, habit, learning roadmap</div>
+            <div style={{ color: '#B91C1C', fontSize: '32px', fontWeight: 'bold' }}>∞</div>
+            <div style={{ fontWeight: 'bold', marginTop: '10px' }}>Growth</div>
+            <div style={{ color: '#666', fontSize: '14px' }}>Gym, habit, roadmap</div>
           </div>
           <div>
-            <div className="text-red-600 text-3xl font-bold">#</div>
-            <div className="text-white text-lg font-semibold mt-2">Movement</div>
-            <div className="text-gray-500 text-sm">Bukan cuma akun IG</div>
+            <div style={{ color: '#B91C1C', fontSize: '32px', fontWeight: 'bold' }}>#</div>
+            <div style={{ fontWeight: 'bold', marginTop: '10px' }}>Movement</div>
+            <div style={{ color: '#666', fontSize: '14px' }}>Bukan cuma akun IG</div>
           </div>
         </div>
-      </section>
+      </div>
 
       {/* Footer */}
-      <footer className="border-t border-gray-800 text-gray-500 text-sm text-center py-8">
+      <div style={{ textAlign: 'center', padding: '30px', color: '#666', fontSize: '14px' }}>
         © 2026 ARTIWORKS — Digital base of Arief
-      </footer>
+      </div>
     </div>
   )
 }
